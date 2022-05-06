@@ -61,7 +61,7 @@ func main() {
 
 	app.Get("/:type/:hash", downloadResource)
 
-	log.Fatal(app.Listen(":30001"))
+	log.Fatal(app.Listen(":3001"))
 }
 
 func downloadResource(c *fiber.Ctx) error {

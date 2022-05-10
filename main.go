@@ -80,8 +80,6 @@ func downloadResource(c *fiber.Ctx) error {
 		return c.SendStatus(204)
 	}
 
-	log.Printf("\n%s\n%s\n", resourceHash, ResourceHash[resourceType])
-
 	c.Set("content-type", "application/octet-stream")
 
 	return c.Send(resourceData)
